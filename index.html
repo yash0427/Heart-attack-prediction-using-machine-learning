@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Predictior</title>
+</head>
+<style>
+        .form{
+            background-color: blue;
+            padding: 300px;
+            text-align: center;
+        }
+        #label{
+          
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .main{
+            align-items: center;
+            padding-left: 500px;
+            padding-top: 50px;
+        }
+        input{
+            width: 20%;
+            height: 40%;
+            font-size: 18px;
+        }
+        button{
+            width: 42%;
+             
+            align-items: center; 
+            font-size: 25px;
+           
+        }
+        .text{
+            font-weight: bold ;
+            color: black;
+            font-size: 35px;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+        }
+        h1{
+            font-size: 50px;
+            color: black;
+         width: 100%;
+            background-color: brown;
+            padding-left:500px;
+        }
+        body{
+            background-image: url('/static/Heart.png');
+            background-size: 1400px 700px;
+            overflow: hidden;
+        }
+</style>
+<body> 
+    
+    
+    <div >
+        <h1>Heart Attack Predictor</h1>
+    </div>
+    <div class="main">
+       <div>
+           <label id="label" for="">Enter values:</label>
+           <br>
+           <br>
+        <form class="formm" action="/predict" method="post">
+            <input type="text" name="age" placeholder="age"  required="required">
+             
+            <input type="text" name="sex" placeholder="Gender"  required="required">
+            <br>
+            <br>
+            <input type="text" name="cp" placeholder="cp"  required="required">
+            
+            <input type="text" name="trtbps" placeholder="trtbps"  required="required">
+            <br>
+            <br>
+            <input type="text" name="chol" placeholder="chol"  required="required">
+          
+            <input type="text" name="fbs" placeholder="fbs"  required="required">
+            <br>
+            <br>
+            <input type="text" name="restecg" placeholder="restecg"  required="required">
+           
+            <input type="text" name="thalachh" placeholder="thalachh"  required="required">
+            <br>
+            <br>
+            <input type="text" name="exng" placeholder="exng"  required="required">
+            
+            <input type="text" name="caa" placeholder="caa"  required="required">
+            <br>
+            <br>
+            <button type="submit">Predict</button>
+        </form> 
+       </div>
+       <br>
+       <br>
+       <div class="text">
+           {{prediction_text}}
+       </div>
+    </div>
+      <br>
+      
+</body>
+</html>
